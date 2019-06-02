@@ -135,6 +135,18 @@ public class RoseBaseListener implements RoseListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterElse_statement(RoseParser.Else_statementContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitElse_statement(RoseParser.Else_statementContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterFor_statement(RoseParser.For_statementContext ctx) { }
 	/**
 	 * {@inheritDoc}

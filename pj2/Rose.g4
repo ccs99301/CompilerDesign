@@ -22,18 +22,20 @@ statement:assignment_statement
 	|read_statement
 	|write_statement
 	;
-assignment_statement:ID DEF arith_expression
+assignment_statement:ID DEF arith_expression SCOL
 	;
-if_statement:IF bool_expression THEN statements END IF
-	|IF bool_expression THEN statements ELSE statements END IF
+if_statement:IF bool_expression THEN statements else_statement
 	;
-for_statement:FOR ID IN arith_expression DOT2 arith_expression LOOP statements END LOOP
+else_statement:ELSE statements END IF SCOL
+	|END IF SCOL
 	;
-exit_statement:EXIT
+for_statement:FOR ID IN arith_expression DOT2 arith_expression LOOP statements END LOOP SCOL
 	;
-read_statement:READ ID
+exit_statement:EXIT SCOL
 	;
-write_statement:WRITE arith_expression
+read_statement:READ ID SCOL
+	;
+write_statement:WRITE arith_expression SCOL
 	;
 bool_expression:bool_term bool_expression2
 	;

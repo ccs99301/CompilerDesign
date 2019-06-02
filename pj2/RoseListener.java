@@ -107,6 +107,16 @@ public interface RoseListener extends ParseTreeListener {
 	 */
 	void exitIf_statement(RoseParser.If_statementContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link RoseParser#else_statement}.
+	 * @param ctx the parse tree
+	 */
+	void enterElse_statement(RoseParser.Else_statementContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link RoseParser#else_statement}.
+	 * @param ctx the parse tree
+	 */
+	void exitElse_statement(RoseParser.Else_statementContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link RoseParser#for_statement}.
 	 * @param ctx the parse tree
 	 */

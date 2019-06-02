@@ -8,7 +8,7 @@ variables:variables2
 variables2:variable variables2
 	|
 	;
-variable:ID COL INTEGER
+variable:ID COL INTEGER SCOL
 	;
 statements:statements2
 	;
